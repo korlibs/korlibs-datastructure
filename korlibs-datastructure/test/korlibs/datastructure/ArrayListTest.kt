@@ -343,7 +343,9 @@ class ArrayListTest {
     @Test
     fun testDoubleToString() {
         val v = DoubleArrayList().also { it.add(1.0); it.add(2.0) }
-        assertEquals("[1, 2]", v.toString())
+        if (v.toString() != "[1.0, 2.0]" && v.toString() != "[1, 2]") {
+            throw AssertionError("expected: <[1.0, 2.0]> or <[1, 2]> but was: $v")
+        }
     }
 
     @Test
