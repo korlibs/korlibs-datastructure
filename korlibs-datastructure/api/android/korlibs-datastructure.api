@@ -300,15 +300,15 @@ public class korlibs/datastructure/BaseDelegatedStackedArray2 : korlibs/datastru
 }
 
 public abstract interface class korlibs/datastructure/BaseList : java/util/List, kotlin/jvm/internal/markers/KMappedMarker {
-	public abstract fun contains (Ljava/lang/Object;)Z
-	public abstract fun containsAll (Ljava/util/Collection;)Z
-	public abstract fun indexOf (Ljava/lang/Object;)I
-	public abstract fun isEmpty ()Z
-	public abstract fun iterator ()Ljava/util/Iterator;
-	public abstract fun lastIndexOf (Ljava/lang/Object;)I
-	public abstract fun listIterator ()Ljava/util/ListIterator;
-	public abstract fun listIterator (I)Ljava/util/ListIterator;
-	public abstract fun subList (II)Ljava/util/List;
+	public fun contains (Ljava/lang/Object;)Z
+	public fun containsAll (Ljava/util/Collection;)Z
+	public fun indexOf (Ljava/lang/Object;)I
+	public fun isEmpty ()Z
+	public fun iterator ()Ljava/util/Iterator;
+	public fun lastIndexOf (Ljava/lang/Object;)I
+	public fun listIterator ()Ljava/util/ListIterator;
+	public fun listIterator (I)Ljava/util/ListIterator;
+	public fun subList (II)Ljava/util/List;
 }
 
 public final class korlibs/datastructure/BaseList$DefaultImpls {
@@ -340,9 +340,9 @@ public class korlibs/datastructure/BaseListIterator : java/util/ListIterator, ko
 }
 
 public abstract interface class korlibs/datastructure/BaseMap : java/util/Map, kotlin/jvm/internal/markers/KMappedMarker {
-	public abstract fun containsKey (Ljava/lang/Object;)Z
-	public abstract fun containsValue (Ljava/lang/Object;)Z
-	public abstract fun isEmpty ()Z
+	public fun containsKey (Ljava/lang/Object;)Z
+	public fun containsValue (Ljava/lang/Object;)Z
+	public fun isEmpty ()Z
 }
 
 public final class korlibs/datastructure/BaseMap$DefaultImpls {
@@ -352,16 +352,16 @@ public final class korlibs/datastructure/BaseMap$DefaultImpls {
 }
 
 public abstract interface class korlibs/datastructure/BaseMutableList : java/util/List, korlibs/datastructure/BaseList, kotlin/jvm/internal/markers/KMutableList {
-	public abstract fun add (Ljava/lang/Object;)Z
-	public abstract fun addAll (Ljava/util/Collection;)Z
-	public abstract fun clear ()V
-	public abstract fun iterator ()Ljava/util/Iterator;
-	public abstract fun listIterator ()Ljava/util/ListIterator;
-	public abstract fun listIterator (I)Ljava/util/ListIterator;
-	public abstract fun remove (Ljava/lang/Object;)Z
-	public abstract fun removeAll (Ljava/util/Collection;)Z
-	public abstract fun retainAll (Ljava/util/Collection;)Z
-	public abstract fun subList (II)Ljava/util/List;
+	public fun add (Ljava/lang/Object;)Z
+	public fun addAll (Ljava/util/Collection;)Z
+	public fun clear ()V
+	public fun iterator ()Ljava/util/Iterator;
+	public fun listIterator ()Ljava/util/ListIterator;
+	public fun listIterator (I)Ljava/util/ListIterator;
+	public fun remove (Ljava/lang/Object;)Z
+	public fun removeAll (Ljava/util/Collection;)Z
+	public fun retainAll (Ljava/util/Collection;)Z
+	public fun subList (II)Ljava/util/List;
 }
 
 public final class korlibs/datastructure/BaseMutableList$DefaultImpls {
@@ -391,7 +391,7 @@ public class korlibs/datastructure/BaseMutableListIterator : korlibs/datastructu
 }
 
 public abstract interface class korlibs/datastructure/BaseMutableMap : java/util/Map, korlibs/datastructure/BaseMap, kotlin/jvm/internal/markers/KMutableMap {
-	public abstract fun putAll (Ljava/util/Map;)V
+	public fun putAll (Ljava/util/Map;)V
 }
 
 public final class korlibs/datastructure/BaseMutableMap$DefaultImpls {
@@ -687,14 +687,16 @@ public class korlibs/datastructure/BooleanDeque : java/util/Collection, kotlin/j
 }
 
 public abstract interface class korlibs/datastructure/BooleanIArray2 : korlibs/datastructure/IArray2 {
-	public abstract fun get (II)Z
-	public abstract fun get (Lkorlibs/math/geom/Vector2I;)Z
-	public abstract fun getAt (I)Ljava/lang/Boolean;
+	public fun get (II)Z
+	public fun get (Lkorlibs/math/geom/Vector2I;)Z
+	public fun getAt (I)Ljava/lang/Boolean;
+	public synthetic fun getAt (I)Ljava/lang/Object;
 	public abstract fun getFast (I)Z
-	public abstract fun set (IIZ)V
-	public abstract fun set (Lkorlibs/math/geom/RectangleInt;Z)V
-	public abstract fun set (Lkorlibs/math/geom/Vector2I;Z)V
-	public abstract fun setAt (IZ)V
+	public fun set (IIZ)V
+	public fun set (Lkorlibs/math/geom/RectangleInt;Z)V
+	public fun set (Lkorlibs/math/geom/Vector2I;Z)V
+	public synthetic fun setAt (ILjava/lang/Object;)V
+	public fun setAt (IZ)V
 	public abstract fun setFast (IZ)V
 }
 
@@ -864,14 +866,16 @@ public class korlibs/datastructure/ByteDeque : java/util/Collection, kotlin/jvm/
 }
 
 public abstract interface class korlibs/datastructure/ByteIArray2 : korlibs/datastructure/IArray2 {
-	public abstract fun get (II)B
-	public abstract fun get (Lkorlibs/math/geom/Vector2I;)B
-	public abstract fun getAt (I)Ljava/lang/Byte;
+	public fun get (II)B
+	public fun get (Lkorlibs/math/geom/Vector2I;)B
+	public fun getAt (I)Ljava/lang/Byte;
+	public synthetic fun getAt (I)Ljava/lang/Object;
 	public abstract fun getFast (I)B
-	public abstract fun set (IIB)V
-	public abstract fun set (Lkorlibs/math/geom/RectangleInt;B)V
-	public abstract fun set (Lkorlibs/math/geom/Vector2I;B)V
-	public abstract fun setAt (IB)V
+	public fun set (IIB)V
+	public fun set (Lkorlibs/math/geom/RectangleInt;B)V
+	public fun set (Lkorlibs/math/geom/Vector2I;B)V
+	public fun setAt (IB)V
+	public synthetic fun setAt (ILjava/lang/Object;)V
 	public abstract fun setFast (IB)V
 }
 
@@ -1088,14 +1092,16 @@ public class korlibs/datastructure/CharDeque : java/util/Collection, kotlin/jvm/
 }
 
 public abstract interface class korlibs/datastructure/CharIArray2 : korlibs/datastructure/IArray2 {
-	public abstract fun get (II)C
-	public abstract fun get (Lkorlibs/math/geom/Vector2I;)C
-	public abstract fun getAt (I)Ljava/lang/Character;
+	public fun get (II)C
+	public fun get (Lkorlibs/math/geom/Vector2I;)C
+	public fun getAt (I)Ljava/lang/Character;
+	public synthetic fun getAt (I)Ljava/lang/Object;
 	public abstract fun getFast (I)C
-	public abstract fun set (IIC)V
-	public abstract fun set (Lkorlibs/math/geom/RectangleInt;C)V
-	public abstract fun set (Lkorlibs/math/geom/Vector2I;C)V
-	public abstract fun setAt (IC)V
+	public fun set (IIC)V
+	public fun set (Lkorlibs/math/geom/RectangleInt;C)V
+	public fun set (Lkorlibs/math/geom/Vector2I;C)V
+	public fun setAt (IC)V
+	public synthetic fun setAt (ILjava/lang/Object;)V
 	public abstract fun setFast (IC)V
 }
 
@@ -1380,14 +1386,16 @@ public class korlibs/datastructure/DoubleDeque : java/util/Collection, kotlin/jv
 }
 
 public abstract interface class korlibs/datastructure/DoubleIArray2 : korlibs/datastructure/IArray2 {
-	public abstract fun get (II)D
-	public abstract fun get (Lkorlibs/math/geom/Vector2I;)D
-	public abstract fun getAt (I)Ljava/lang/Double;
+	public fun get (II)D
+	public fun get (Lkorlibs/math/geom/Vector2I;)D
+	public fun getAt (I)Ljava/lang/Double;
+	public synthetic fun getAt (I)Ljava/lang/Object;
 	public abstract fun getFast (I)D
-	public abstract fun set (IID)V
-	public abstract fun set (Lkorlibs/math/geom/RectangleInt;D)V
-	public abstract fun set (Lkorlibs/math/geom/Vector2I;D)V
-	public abstract fun setAt (ID)V
+	public fun set (IID)V
+	public fun set (Lkorlibs/math/geom/RectangleInt;D)V
+	public fun set (Lkorlibs/math/geom/Vector2I;D)V
+	public fun setAt (ID)V
+	public synthetic fun setAt (ILjava/lang/Object;)V
 	public abstract fun setFast (ID)V
 }
 
@@ -1870,14 +1878,16 @@ public final class korlibs/datastructure/FloatFloatMap$Iterator {
 }
 
 public abstract interface class korlibs/datastructure/FloatIArray2 : korlibs/datastructure/IArray2 {
-	public abstract fun get (II)F
-	public abstract fun get (Lkorlibs/math/geom/Vector2I;)F
-	public abstract fun getAt (I)Ljava/lang/Float;
+	public fun get (II)F
+	public fun get (Lkorlibs/math/geom/Vector2I;)F
+	public fun getAt (I)Ljava/lang/Float;
+	public synthetic fun getAt (I)Ljava/lang/Object;
 	public abstract fun getFast (I)F
-	public abstract fun set (IIF)V
-	public abstract fun set (Lkorlibs/math/geom/RectangleInt;F)V
-	public abstract fun set (Lkorlibs/math/geom/Vector2I;F)V
-	public abstract fun setAt (IF)V
+	public fun set (IIF)V
+	public fun set (Lkorlibs/math/geom/RectangleInt;F)V
+	public fun set (Lkorlibs/math/geom/Vector2I;F)V
+	public fun setAt (IF)V
+	public synthetic fun setAt (ILjava/lang/Object;)V
 	public abstract fun setFast (IF)V
 }
 
@@ -2239,29 +2249,32 @@ public final class korlibs/datastructure/HistoryStack {
 
 public abstract interface class korlibs/datastructure/IArray2 : java/lang/Iterable, kotlin/jvm/internal/markers/KMappedMarker {
 	public static final field Companion Lkorlibs/datastructure/IArray2$Companion;
-	public abstract fun asString ()Ljava/lang/String;
-	public abstract fun asString (Ljava/lang/String;Lkotlin/jvm/functions/Function1;)Ljava/lang/String;
-	public abstract fun asString (Ljava/util/Map;Ljava/lang/String;)Ljava/lang/String;
-	public abstract fun contains (Ljava/lang/Object;)Z
-	public abstract fun dump ()V
-	public abstract fun equalsAt (ILjava/lang/Object;)Z
+	public fun asString ()Ljava/lang/String;
+	public fun asString (Ljava/lang/String;Lkotlin/jvm/functions/Function1;)Ljava/lang/String;
+	public fun asString (Ljava/util/Map;Ljava/lang/String;)Ljava/lang/String;
+	public static synthetic fun asString$default (Lkorlibs/datastructure/IArray2;Ljava/lang/String;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Ljava/lang/String;
+	public static synthetic fun asString$default (Lkorlibs/datastructure/IArray2;Ljava/util/Map;Ljava/lang/String;ILjava/lang/Object;)Ljava/lang/String;
+	public fun contains (Ljava/lang/Object;)Z
+	public fun dump ()V
+	public fun equalsAt (ILjava/lang/Object;)Z
 	public abstract fun getAt (I)Ljava/lang/Object;
-	public abstract fun getAt (II)Ljava/lang/Object;
+	public fun getAt (II)Ljava/lang/Object;
 	public abstract fun getHeight ()I
-	public abstract fun getPositionsWithValue (Ljava/lang/Object;)Ljava/util/List;
-	public abstract fun getSize ()I
+	public fun getPositionsWithValue (Ljava/lang/Object;)Ljava/util/List;
+	public fun getSize ()I
 	public abstract fun getWidth ()I
-	public abstract fun inside (II)Z
-	public abstract fun iterator ()Ljava/util/Iterator;
-	public abstract fun printAt (I)V
-	public abstract fun printAt (II)V
-	public abstract fun set (Ljava/util/List;)V
-	public abstract fun setAt (IILjava/lang/Object;)V
+	public fun inside (II)Z
+	public fun iterator ()Ljava/util/Iterator;
+	public fun printAt (I)V
+	public fun printAt (II)V
+	public fun set (Ljava/util/List;)V
+	public fun setAt (IILjava/lang/Object;)V
 	public abstract fun setAt (ILjava/lang/Object;)V
-	public abstract fun setAt (Lkorlibs/math/geom/RectangleInt;Ljava/lang/Object;)V
-	public abstract fun toStringList (Lkotlin/jvm/functions/Function1;Ljava/lang/String;)Ljava/util/List;
-	public abstract fun tryGet (II)Ljava/lang/Object;
-	public abstract fun trySet (IILjava/lang/Object;)V
+	public fun setAt (Lkorlibs/math/geom/RectangleInt;Ljava/lang/Object;)V
+	public fun toStringList (Lkotlin/jvm/functions/Function1;Ljava/lang/String;)Ljava/util/List;
+	public static synthetic fun toStringList$default (Lkorlibs/datastructure/IArray2;Lkotlin/jvm/functions/Function1;Ljava/lang/String;ILjava/lang/Object;)Ljava/util/List;
+	public fun tryGet (II)Ljava/lang/Object;
+	public fun trySet (IILjava/lang/Object;)V
 }
 
 public final class korlibs/datastructure/IArray2$Companion {
@@ -2323,22 +2336,22 @@ public final class korlibs/datastructure/IStackedArray2$DefaultImpls {
 }
 
 public abstract interface class korlibs/datastructure/IStackedArray2Base {
-	public abstract fun eachPosition (Lkotlin/jvm/functions/Function2;)V
+	public fun eachPosition (Lkotlin/jvm/functions/Function2;)V
 	public abstract fun getContentVersion ()I
-	public abstract fun getEndX ()I
-	public abstract fun getEndY ()I
+	public fun getEndX ()I
+	public fun getEndY ()I
 	public abstract fun getHeight ()I
 	public abstract fun getMaxLevel ()I
 	public abstract fun getStackLevel (II)I
 	public abstract fun getStartX ()I
 	public abstract fun getStartY ()I
 	public abstract fun getWidth ()I
-	public abstract fun inside (II)Z
-	public abstract fun inside (III)Z
-	public abstract fun removeAll (II)Z
-	public abstract fun removeAt (III)Z
-	public abstract fun removeFirst (II)Z
-	public abstract fun removeLast (II)Z
+	public fun inside (II)Z
+	public fun inside (III)Z
+	public fun removeAll (II)Z
+	public fun removeAt (III)Z
+	public fun removeFirst (II)Z
+	public fun removeLast (II)Z
 	public abstract fun setStackLevelInternal (Lkorlibs/datastructure/IStackedArray2Base$Internal;III)Z
 	public abstract fun setToFrom (IIIIII)V
 }
@@ -2363,13 +2376,13 @@ public abstract interface class korlibs/datastructure/IStackedDoubleArray2 : kor
 	public abstract fun clone ()Lkorlibs/datastructure/IStackedDoubleArray2;
 	public abstract fun get (III)D
 	public abstract fun getEmpty ()D
-	public abstract fun getFirst (II)D
-	public abstract fun getLast (II)D
-	public abstract fun pop (II)D
-	public abstract fun push (IID)V
+	public fun getFirst (II)D
+	public fun getLast (II)D
+	public fun pop (II)D
+	public fun push (IID)V
 	public abstract fun set (IIID)V
-	public abstract fun setFirst (IID)V
-	public abstract fun setToFrom (IIIIII)V
+	public fun setFirst (IID)V
+	public fun setToFrom (IIIIII)V
 }
 
 public final class korlibs/datastructure/IStackedDoubleArray2$DefaultImpls {
@@ -2394,13 +2407,13 @@ public abstract interface class korlibs/datastructure/IStackedInt53Array2 : korl
 	public abstract fun clone ()Lkorlibs/datastructure/IStackedInt53Array2;
 	public abstract fun get-uuObgGU (III)D
 	public abstract fun getEmpty-FJlGiV0 ()D
-	public abstract fun getFirst-cFgNkvU (II)D
-	public abstract fun getLast-cFgNkvU (II)D
-	public abstract fun pop-cFgNkvU (II)D
-	public abstract fun push-cpPDN7o (IID)V
+	public fun getFirst-cFgNkvU (II)D
+	public fun getLast-cFgNkvU (II)D
+	public fun pop-cFgNkvU (II)D
+	public fun push-cpPDN7o (IID)V
 	public abstract fun set-euT6QZk (IIID)V
-	public abstract fun setFirst-cpPDN7o (IID)V
-	public abstract fun setToFrom (IIIIII)V
+	public fun setFirst-cpPDN7o (IID)V
+	public fun setToFrom (IIIIII)V
 }
 
 public final class korlibs/datastructure/IStackedInt53Array2$DefaultImpls {
@@ -2425,13 +2438,13 @@ public abstract interface class korlibs/datastructure/IStackedInt64Array2 : korl
 	public abstract fun clone ()Lkorlibs/datastructure/IStackedInt64Array2;
 	public abstract fun get-VIgI3do (III)D
 	public abstract fun getEmpty-GErLBD8 ()D
-	public abstract fun getFirst-BiT2Tc4 (II)D
-	public abstract fun getLast-BiT2Tc4 (II)D
-	public abstract fun pop-BiT2Tc4 (II)D
-	public abstract fun push-yWcCwUg (IID)V
+	public fun getFirst-BiT2Tc4 (II)D
+	public fun getLast-BiT2Tc4 (II)D
+	public fun pop-BiT2Tc4 (II)D
+	public fun push-yWcCwUg (IID)V
 	public abstract fun set-BQ8X0h4 (IIID)V
-	public abstract fun setFirst-yWcCwUg (IID)V
-	public abstract fun setToFrom (IIIIII)V
+	public fun setFirst-yWcCwUg (IID)V
+	public fun setToFrom (IIIIII)V
 }
 
 public final class korlibs/datastructure/IStackedInt64Array2$DefaultImpls {
@@ -2456,13 +2469,13 @@ public abstract interface class korlibs/datastructure/IStackedIntArray2 : korlib
 	public abstract fun clone ()Lkorlibs/datastructure/IStackedIntArray2;
 	public abstract fun get (III)I
 	public abstract fun getEmpty ()I
-	public abstract fun getFirst (II)I
-	public abstract fun getLast (II)I
-	public abstract fun pop (II)I
-	public abstract fun push (III)V
+	public fun getFirst (II)I
+	public fun getLast (II)I
+	public fun pop (II)I
+	public fun push (III)V
 	public abstract fun set (IIII)V
-	public abstract fun setFirst (III)V
-	public abstract fun setToFrom (IIIIII)V
+	public fun setFirst (III)V
+	public fun setToFrom (IIIIII)V
 }
 
 public final class korlibs/datastructure/IStackedIntArray2$DefaultImpls {
@@ -2487,13 +2500,13 @@ public abstract interface class korlibs/datastructure/IStackedLongArray2 : korli
 	public abstract fun clone ()Lkorlibs/datastructure/IStackedLongArray2;
 	public abstract fun get (III)J
 	public abstract fun getEmpty ()J
-	public abstract fun getFirst (II)J
-	public abstract fun getLast (II)J
-	public abstract fun pop (II)J
-	public abstract fun push (IIJ)V
+	public fun getFirst (II)J
+	public fun getLast (II)J
+	public fun pop (II)J
+	public fun push (IIJ)V
 	public abstract fun set (IIIJ)V
-	public abstract fun setFirst (IIJ)V
-	public abstract fun setToFrom (IIIIII)V
+	public fun setFirst (IIJ)V
+	public fun setToFrom (IIIIII)V
 }
 
 public final class korlibs/datastructure/IStackedLongArray2$DefaultImpls {
@@ -2655,14 +2668,16 @@ public final class korlibs/datastructure/Int53Array2$Companion {
 }
 
 public abstract interface class korlibs/datastructure/Int53IArray2 : korlibs/datastructure/IArray2 {
-	public abstract fun get-cFgNkvU (II)D
-	public abstract fun get-lmZj1yc (Lkorlibs/math/geom/Vector2I;)D
-	public abstract fun getAt-lmZj1yc (I)D
+	public fun get-cFgNkvU (II)D
+	public fun get-lmZj1yc (Lkorlibs/math/geom/Vector2I;)D
+	public synthetic fun getAt (I)Ljava/lang/Object;
+	public fun getAt-lmZj1yc (I)D
 	public abstract fun getFast-lmZj1yc (I)D
-	public abstract fun set-MSLl_eA (Lkorlibs/math/geom/RectangleInt;D)V
-	public abstract fun set-MSLl_eA (Lkorlibs/math/geom/Vector2I;D)V
-	public abstract fun set-cpPDN7o (IID)V
-	public abstract fun setAt-MSLl_eA (ID)V
+	public fun set-MSLl_eA (Lkorlibs/math/geom/RectangleInt;D)V
+	public fun set-MSLl_eA (Lkorlibs/math/geom/Vector2I;D)V
+	public fun set-cpPDN7o (IID)V
+	public synthetic fun setAt (ILjava/lang/Object;)V
+	public fun setAt-MSLl_eA (ID)V
 	public abstract fun setFast-MSLl_eA (ID)V
 }
 
@@ -2758,14 +2773,16 @@ public final class korlibs/datastructure/Int64Array2$Companion {
 }
 
 public abstract interface class korlibs/datastructure/Int64IArray2 : korlibs/datastructure/IArray2 {
-	public abstract fun get-474rlN4 (Lkorlibs/math/geom/Vector2I;)D
-	public abstract fun get-BiT2Tc4 (II)D
-	public abstract fun getAt-474rlN4 (I)D
+	public fun get-474rlN4 (Lkorlibs/math/geom/Vector2I;)D
+	public fun get-BiT2Tc4 (II)D
+	public synthetic fun getAt (I)Ljava/lang/Object;
+	public fun getAt-474rlN4 (I)D
 	public abstract fun getFast-474rlN4 (I)D
-	public abstract fun set-eS3UO-s (Lkorlibs/math/geom/RectangleInt;D)V
-	public abstract fun set-eS3UO-s (Lkorlibs/math/geom/Vector2I;D)V
-	public abstract fun set-yWcCwUg (IID)V
-	public abstract fun setAt-eS3UO-s (ID)V
+	public fun set-eS3UO-s (Lkorlibs/math/geom/RectangleInt;D)V
+	public fun set-eS3UO-s (Lkorlibs/math/geom/Vector2I;D)V
+	public fun set-yWcCwUg (IID)V
+	public synthetic fun setAt (ILjava/lang/Object;)V
+	public fun setAt-eS3UO-s (ID)V
 	public abstract fun setFast-eS3UO-s (ID)V
 }
 
@@ -3055,14 +3072,16 @@ public final class korlibs/datastructure/IntFloatMap$Iterator {
 }
 
 public abstract interface class korlibs/datastructure/IntIArray2 : korlibs/datastructure/IArray2 {
-	public abstract fun get (II)I
-	public abstract fun get (Lkorlibs/math/geom/Vector2I;)I
-	public abstract fun getAt (I)Ljava/lang/Integer;
+	public fun get (II)I
+	public fun get (Lkorlibs/math/geom/Vector2I;)I
+	public fun getAt (I)Ljava/lang/Integer;
+	public synthetic fun getAt (I)Ljava/lang/Object;
 	public abstract fun getFast (I)I
-	public abstract fun set (III)V
-	public abstract fun set (Lkorlibs/math/geom/RectangleInt;I)V
-	public abstract fun set (Lkorlibs/math/geom/Vector2I;I)V
-	public abstract fun setAt (II)V
+	public fun set (III)V
+	public fun set (Lkorlibs/math/geom/RectangleInt;I)V
+	public fun set (Lkorlibs/math/geom/Vector2I;I)V
+	public fun setAt (II)V
+	public synthetic fun setAt (ILjava/lang/Object;)V
 	public abstract fun setFast (II)V
 }
 
@@ -3578,14 +3597,16 @@ public class korlibs/datastructure/LongDeque : java/util/Collection, kotlin/jvm/
 }
 
 public abstract interface class korlibs/datastructure/LongIArray2 : korlibs/datastructure/IArray2 {
-	public abstract fun get (II)J
-	public abstract fun get (Lkorlibs/math/geom/Vector2I;)J
-	public abstract fun getAt (I)Ljava/lang/Long;
+	public fun get (II)J
+	public fun get (Lkorlibs/math/geom/Vector2I;)J
+	public fun getAt (I)Ljava/lang/Long;
+	public synthetic fun getAt (I)Ljava/lang/Object;
 	public abstract fun getFast (I)J
-	public abstract fun set (IIJ)V
-	public abstract fun set (Lkorlibs/math/geom/RectangleInt;J)V
-	public abstract fun set (Lkorlibs/math/geom/Vector2I;J)V
-	public abstract fun setAt (IJ)V
+	public fun set (IIJ)V
+	public fun set (Lkorlibs/math/geom/RectangleInt;J)V
+	public fun set (Lkorlibs/math/geom/Vector2I;J)V
+	public fun setAt (IJ)V
+	public synthetic fun setAt (ILjava/lang/Object;)V
 	public abstract fun setFast (IJ)V
 }
 
@@ -3961,14 +3982,16 @@ public class korlibs/datastructure/ShortDeque : java/util/Collection, kotlin/jvm
 }
 
 public abstract interface class korlibs/datastructure/ShortIArray2 : korlibs/datastructure/IArray2 {
-	public abstract fun get (II)S
-	public abstract fun get (Lkorlibs/math/geom/Vector2I;)S
-	public abstract fun getAt (I)Ljava/lang/Short;
+	public fun get (II)S
+	public fun get (Lkorlibs/math/geom/Vector2I;)S
+	public synthetic fun getAt (I)Ljava/lang/Object;
+	public fun getAt (I)Ljava/lang/Short;
 	public abstract fun getFast (I)S
-	public abstract fun set (IIS)V
-	public abstract fun set (Lkorlibs/math/geom/RectangleInt;S)V
-	public abstract fun set (Lkorlibs/math/geom/Vector2I;S)V
-	public abstract fun setAt (IS)V
+	public fun set (IIS)V
+	public fun set (Lkorlibs/math/geom/RectangleInt;S)V
+	public fun set (Lkorlibs/math/geom/Vector2I;S)V
+	public synthetic fun setAt (ILjava/lang/Object;)V
+	public fun setAt (IS)V
 	public abstract fun setFast (IS)V
 }
 
@@ -4707,14 +4730,14 @@ public class korlibs/datastructure/TGenDeque : java/util/Collection, kotlin/jvm/
 }
 
 public abstract interface class korlibs/datastructure/TGenIArray2 : korlibs/datastructure/IArray2 {
-	public abstract fun get (II)Ljava/lang/Object;
-	public abstract fun get (Lkorlibs/math/geom/Vector2I;)Ljava/lang/Object;
-	public abstract fun getAt (I)Ljava/lang/Object;
+	public fun get (II)Ljava/lang/Object;
+	public fun get (Lkorlibs/math/geom/Vector2I;)Ljava/lang/Object;
+	public fun getAt (I)Ljava/lang/Object;
 	public abstract fun getFast (I)Ljava/lang/Object;
-	public abstract fun set (IILjava/lang/Object;)V
-	public abstract fun set (Lkorlibs/math/geom/RectangleInt;Ljava/lang/Object;)V
-	public abstract fun set (Lkorlibs/math/geom/Vector2I;Ljava/lang/Object;)V
-	public abstract fun setAt (ILjava/lang/Object;)V
+	public fun set (IILjava/lang/Object;)V
+	public fun set (Lkorlibs/math/geom/RectangleInt;Ljava/lang/Object;)V
+	public fun set (Lkorlibs/math/geom/Vector2I;Ljava/lang/Object;)V
+	public fun setAt (ILjava/lang/Object;)V
 	public abstract fun setFast (ILjava/lang/Object;)V
 }
 
@@ -5511,8 +5534,8 @@ public final class korlibs/datastructure/map/MutableEntryExt$Companion {
 }
 
 public abstract interface class korlibs/datastructure/map/MutableMapExt : java/util/Map, kotlin/jvm/internal/markers/KMutableMap {
-	public abstract fun isEmpty ()Z
-	public abstract fun putAll (Ljava/util/Map;)V
+	public fun isEmpty ()Z
+	public fun putAll (Ljava/util/Map;)V
 }
 
 public final class korlibs/datastructure/map/MutableMapExt$DefaultImpls {
@@ -5752,7 +5775,7 @@ public final class korlibs/math/geom/DoubleVectorArrayList : korlibs/datastructu
 
 public abstract interface class korlibs/math/geom/DoubleVectorList : korlibs/datastructure/Extra, korlibs/math/geom/IDoubleVectorList {
 	public abstract fun getClosed ()Z
-	public abstract fun getGeneric (I)Lkorlibs/math/geom/GenericDoubleVector;
+	public fun getGeneric (I)Lkorlibs/math/geom/GenericDoubleVector;
 }
 
 public final class korlibs/math/geom/DoubleVectorList$DefaultImpls {
@@ -5940,7 +5963,7 @@ public final class korlibs/math/geom/PointIntArrayList$PointSortOpts : korlibs/d
 }
 
 public abstract interface class korlibs/math/geom/PointIntList {
-	public abstract fun get (I)Lkorlibs/math/geom/Vector2I;
+	public fun get (I)Lkorlibs/math/geom/Vector2I;
 	public abstract fun getClosed ()Z
 	public abstract fun getSize ()I
 	public abstract fun getX (I)I
@@ -5952,26 +5975,31 @@ public final class korlibs/math/geom/PointIntList$DefaultImpls {
 }
 
 public abstract interface class korlibs/math/geom/PointList : korlibs/datastructure/Extra, korlibs/math/geom/DoubleVectorList, korlibs/math/geom/IPointList {
-	public abstract fun clone (Lkorlibs/math/geom/PointArrayList;)Lkorlibs/math/geom/PointArrayList;
-	public abstract fun contains (DD)Z
-	public abstract fun contains (FF)Z
-	public abstract fun contains (II)Z
-	public abstract fun contains (Lkorlibs/math/geom/Vector2D;)Z
-	public abstract fun get (I)Lkorlibs/math/geom/Vector2D;
-	public abstract fun getComponentList (I[D)[D
-	public abstract fun getDimensions ()I
-	public abstract fun getFirst ()Lkorlibs/math/geom/Vector2D;
-	public abstract fun getLast ()Lkorlibs/math/geom/Vector2D;
+	public fun clone (Lkorlibs/math/geom/PointArrayList;)Lkorlibs/math/geom/PointArrayList;
+	public static synthetic fun clone$default (Lkorlibs/math/geom/PointList;Lkorlibs/math/geom/PointArrayList;ILjava/lang/Object;)Lkorlibs/math/geom/PointArrayList;
+	public fun contains (DD)Z
+	public fun contains (FF)Z
+	public fun contains (II)Z
+	public fun contains (Ljava/lang/Object;)Z
+	public fun contains (Lkorlibs/math/geom/Vector2D;)Z
+	public synthetic fun get (I)Ljava/lang/Object;
+	public fun get (I)Lkorlibs/math/geom/Vector2D;
+	public fun getComponentList (I[D)[D
+	public static synthetic fun getComponentList$default (Lkorlibs/math/geom/PointList;I[DILjava/lang/Object;)[D
+	public fun getDimensions ()I
+	public fun getFirst ()Lkorlibs/math/geom/Vector2D;
+	public fun getLast ()Lkorlibs/math/geom/Vector2D;
 	public abstract fun getSize ()I
-	public abstract fun getX (I)D
-	public abstract fun getY (I)D
-	public abstract fun isEmpty ()Z
-	public abstract fun orientationScreen ()Lkorlibs/math/geom/Orientation;
-	public abstract fun orientationStd ()Lkorlibs/math/geom/Orientation;
-	public abstract fun orientationWithUp (Lkorlibs/math/geom/Vector2D;)Lkorlibs/math/geom/Orientation;
-	public abstract fun plus (Lkorlibs/math/geom/PointList;)Lkorlibs/math/geom/PointArrayList;
-	public abstract fun roundDecimalPlaces (ILkorlibs/math/geom/PointArrayList;)Lkorlibs/math/geom/PointList;
-	public abstract fun toList ()Ljava/util/List;
+	public fun getX (I)D
+	public fun getY (I)D
+	public fun isEmpty ()Z
+	public fun orientationScreen ()Lkorlibs/math/geom/Orientation;
+	public fun orientationStd ()Lkorlibs/math/geom/Orientation;
+	public fun orientationWithUp (Lkorlibs/math/geom/Vector2D;)Lkorlibs/math/geom/Orientation;
+	public fun plus (Lkorlibs/math/geom/PointList;)Lkorlibs/math/geom/PointArrayList;
+	public fun roundDecimalPlaces (ILkorlibs/math/geom/PointArrayList;)Lkorlibs/math/geom/PointList;
+	public static synthetic fun roundDecimalPlaces$default (Lkorlibs/math/geom/PointList;ILkorlibs/math/geom/PointArrayList;ILjava/lang/Object;)Lkorlibs/math/geom/PointList;
+	public fun toList ()Ljava/util/List;
 }
 
 public final class korlibs/math/geom/PointList$DefaultImpls {
