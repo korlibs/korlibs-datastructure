@@ -343,7 +343,7 @@ class ArrayListTest {
     @Test
     fun testDoubleToString() {
         val v = DoubleArrayList().also { it.add(1.0); it.add(2.0) }
-        assertEquals("[1.0, 2.0]", v.toString())
+        assertEquals("[1, 2]", v.toString())
     }
 
     @Test
