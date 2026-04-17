@@ -210,6 +210,145 @@ class ArrayListTest {
     }
 
     @Test
+    fun testDoubleMultiArgAdd() {
+        val v = DoubleArrayList()
+        v.add(1.0, 2.0)
+        assertEquals(listOf(1.0, 2.0), v.toList())
+        v.add(3.0, 4.0, 5.0)
+        assertEquals(listOf(1.0, 2.0, 3.0, 4.0, 5.0), v.toList())
+        v.add(6.0, 7.0, 8.0, 9.0)
+        assertEquals(listOf(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0), v.toList())
+        val v2 = DoubleArrayList()
+        v2.add(1.0, 2.0, 3.0, 4.0, 5.0)
+        assertEquals(listOf(1.0, 2.0, 3.0, 4.0, 5.0), v2.toList())
+        val v3 = DoubleArrayList()
+        v3.add(1.0, 2.0, 3.0, 4.0, 5.0, 6.0)
+        assertEquals(listOf(1.0, 2.0, 3.0, 4.0, 5.0, 6.0), v3.toList())
+    }
+
+    @Test
+    fun testDoublePlusAssign() {
+        val v = DoubleArrayList()
+        v += 1.0
+        v += doubleArrayOf(2.0, 3.0)
+        v += DoubleArrayList().also { it.add(4.0) }
+        v += listOf(5.0, 6.0)
+        assertEquals(listOf(1.0, 2.0, 3.0, 4.0, 5.0, 6.0), v.toList())
+    }
+
+    @Test
+    fun testDoubleAddBulk() {
+        val v = DoubleArrayList()
+        v.add(doubleArrayOf(1.0, 2.0, 3.0, 4.0, 5.0), offset = 1, length = 3)
+        assertEquals(listOf(2.0, 3.0, 4.0), v.toList())
+
+        val v2 = DoubleArrayList()
+        val src = DoubleArrayList().also { it.add(10.0); it.add(20.0) }
+        v2.add(src)
+        assertEquals(listOf(10.0, 20.0), v2.toList())
+
+        val v3 = DoubleArrayList()
+        v3.add(listOf(5.0, 6.0, 7.0))
+        assertEquals(listOf(5.0, 6.0, 7.0), v3.toList())
+    }
+
+    @Test
+    fun testDoubleGetSetSetAt() {
+        val v = DoubleArrayList().also { it.add(1.0); it.add(2.0); it.add(3.0) }
+        assertEquals(2.0, v[1])
+        assertEquals(2.0, v.getAt(1))
+        v[1] = 99.0
+        assertEquals(99.0, v[1])
+        val ret = v.setAt(1, 55.0)
+        assertEquals(55.0, ret)
+        assertEquals(55.0, v[1])
+        // set beyond length extends the list
+        v[5] = 7.0
+        assertEquals(6, v.size)
+        assertEquals(7.0, v[5])
+    }
+
+    @Test
+    fun testDoubleContains() {
+        val v = DoubleArrayList().also { it.add(1.0); it.add(2.0); it.add(3.0) }
+        assertEquals(true, v.contains(2.0))
+        assertEquals(false, v.contains(99.0))
+        assertEquals(true, v.containsAll(listOf(1.0, 3.0)))
+        assertEquals(false, v.containsAll(listOf(1.0, 99.0)))
+        assertEquals(false, v.isEmpty())
+        assertEquals(true, DoubleArrayList().isEmpty())
+    }
+
+    @Test
+    fun testDoubleIndexOf() {
+        val v = DoubleArrayList().also { it.add(1.0); it.add(2.0); it.add(3.0); it.add(2.0) }
+        assertEquals(1, v.indexOf(2.0, 0, v.size))
+        assertEquals(3, v.lastIndexOf(2.0, 0, v.size))
+        assertEquals(-1, v.indexOf(99.0, 0, v.size))
+    }
+
+    @Test
+    fun testDoubleInsertAt() {
+        val v = DoubleArrayList().also { it.add(1.0); it.add(3.0) }
+        v.insertAt(1, 2.0)
+        assertEquals(listOf(1.0, 2.0, 3.0), v.toList())
+
+        val v2 = DoubleArrayList().also { it.add(1.0); it.add(4.0) }
+        v2.insertAt(1, 2.0, 3.0)
+        assertEquals(listOf(1.0, 2.0, 3.0, 4.0), v2.toList())
+
+        val v3 = DoubleArrayList().also { it.add(1.0); it.add(5.0) }
+        v3.insertAt(1, doubleArrayOf(0.0, 2.0, 3.0, 4.0), start = 1, end = 4)
+        assertEquals(listOf(1.0, 2.0, 3.0, 4.0, 5.0), v3.toList())
+    }
+
+    @Test
+    fun testDoubleSwap() {
+        val v = DoubleArrayList().also { it.add(1.0); it.add(2.0); it.add(3.0) }
+        v.swap(0, 2)
+        assertEquals(listOf(3.0, 2.0, 1.0), v.toList())
+    }
+
+    @Test
+    fun testDoubleRemoveAt() {
+        val v = DoubleArrayList().also { it.add(1.0); it.add(2.0); it.add(3.0); it.add(4.0); it.add(5.0) }
+        val removed = v.removeAt(1)
+        assertEquals(2.0, removed)
+        assertEquals(listOf(1.0, 3.0, 4.0, 5.0), v.toList())
+
+        val removed2 = v.removeAt(1, 2)
+        assertEquals(3.0, removed2)
+        assertEquals(listOf(1.0, 5.0), v.toList())
+    }
+
+    @Test
+    fun testDoubleCloneAndToDoubleArray() {
+        val v = DoubleArrayList().also { it.add(1.0); it.add(2.0); it.add(3.0) }
+        val clone = v.clone()
+        assertEquals(v.toList(), clone.toList())
+        clone.add(4.0)
+        assertEquals(3, v.size) // original unaffected
+        val arr = v.toDoubleArray()
+        assertEquals(3, arr.size)
+        assertEquals(1.0, arr[0])
+    }
+
+    @Test
+    fun testDoubleListIteratorAndSubList() {
+        val v = DoubleArrayList().also { it.add(1.0); it.add(2.0); it.add(3.0); it.add(4.0) }
+        assertEquals(listOf(2.0, 3.0, 4.0), v.listIterator(1).asSequence().toList())
+        assertEquals(listOf(2.0, 3.0), v.subList(1, 3))
+    }
+
+    @Test
+    fun testDoubleToString() {
+        val v = DoubleArrayList().also { it.add(1.0); it.add(2.0) }
+        if (v.toString() != "[1.0, 2.0]" && v.toString() != "[1, 2]") {
+            throw AssertionError("expected: <[1.0, 2.0]> or <[1, 2]> but was: $v")
+        }
+    }
+
+    @Test
     fun testHashCodeLongArrayList() {
         val a = ArrayList<Any>(10)
         val hc0 = a.hashCode()
